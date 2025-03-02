@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;">
+    <meta name="viewport" content="initial-scale=0.8, user-scalable=0" />
+    <link rel="manifest" href="/manifest.json">
+    <title>Spaceship Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="p5.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main>
+    </main>
+    <script>
+        function start(isFullScreen = false) {
+            if (isFullScreen) {
+
+                var element = document.body;
+                var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+
+                if (requestMethod) { // Native full screen.
+                    requestMethod.call(element);
+                } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+                    var wscript = new ActiveXObject("WScript.Shell");
+                    if (wscript !== null) {
+                        wscript.SendKeys("{F11}");
+                    }
+                }
+            }
+            document.getElementById("buttons").remove();
+            new p5(sketch);
+        }
+    </script>
+    <div id="buttons">
+        <button onclick="start(true)">full</button>
+        <button onclick="start()">normal</button>
+    </div>
+    <script async defer>start()</script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="691px" height="691px">
+
+<defs>
+        <filter id="shadow-1" height="300%" width="300%" x="-100%" y="-100%">
+            <feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood>
+            <feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite>
+            <feGaussianBlur in="composite" stdDeviation="15" result="blur"></feGaussianBlur>
+            <feOffset dx="0" dy="0" result="offset"></feOffset>
+            <feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite>
+        </filter>
+        <filter id="shadow-2" height="300%" width="300%" x="-100%" y="-100%">
+            <feFlood flood-color="rgba(255, 255, 255, 1)" result="flood"></feFlood>
+            <feComposite in="flood" in2="SourceGraphic" operator="atop" result="composite"></feComposite>
+            <feGaussianBlur in="composite" stdDeviation="15" result="blur"></feGaussianBlur>
+            <feOffset dx="0" dy="0" result="offset"></feOffset>
+            <feComposite in="SourceGraphic" in2="offset" operator="over"></feComposite>
+        </filter>
+    </defs>
+
+<path fill-rule="evenodd"  fill="#ffffff" fill-opacity="0" stroke="#ffffff" stroke-opacity="1" stroke-width="6" filter="url(#shadow-1)"
+ d="M48.000,-0.000 L642.1000,-0.000 C669.510,-0.000 691.000,21.490 691.000,48.000 L691.000,642.1000 C691.000,669.510 669.510,691.000 642.1000,691.000 L48.000,691.000 C21.490,691.000 -0.000,669.510 -0.000,642.1000 L-0.000,48.000 C-0.000,21.490 21.490,-0.000 48.000,-0.000 Z"/>
+</svg>
